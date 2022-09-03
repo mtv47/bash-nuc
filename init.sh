@@ -16,15 +16,11 @@ echo ""
 echo "Script by mtv47 to set up a nuc server with docker"
 echo ""
 
-# Ask the user name
-echo "Please enter your user name: "
-read name
+sudo bash variables
 
 echo ""
-echo "Please enter your choice: "
+echo "This script will be working in" $USER_HOME
 echo ""
-
-sudo bash variables.sh
 
 options=("Basic Setup" "Installs for Docker" "Installs for Docker Containers" "Quit")
 

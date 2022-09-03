@@ -25,10 +25,7 @@ if [ "$EUID" -ne 0 ]; then
   exit
 fi
 
-# Ask the user name
-echo "Please enter your user name: "
-read name
-USER_HOME = /home/$name
+USER_HOME=$(eval echo ~${SUDO_USER})
 
 # Clones the repository
 git clone https://github.com/mtv47/bash-nuc.git $USER_HOME/bash-nuc
