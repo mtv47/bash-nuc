@@ -1,9 +1,5 @@
 #!/bin/bash
 
-#Ask for user name
-echo "What is your user name?"
-read user_name
-
 PATH_TO_SCRIPTS="$HOME/bash-nuc"
 mkdir $HOME/docker_data
 DOCKER_DATA="$HOME/docker_data"
