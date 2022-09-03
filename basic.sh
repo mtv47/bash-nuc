@@ -45,4 +45,4 @@ sudo ufw allow 51820/udp
 sudo ufw allow 3001
 echo "================================================================================"
 echo "Enabling UFW"
-sudo ufw start
+sudo ufw enable
