@@ -16,7 +16,8 @@ echo ""
 echo "Script by mtv47 to set up a nuc server with docker"
 echo ""
 
-sudo bash variables.sh
+USER_HOME=$(eval echo ~${SUDO_USER})
+PATH_TO_SCRIPTS="$USER_HOME/bash-nuc"
 
 echo ""
 echo "This script will be working in"
