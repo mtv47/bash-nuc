@@ -12,11 +12,11 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ=Europe/Zurich
-      - SERVERURL={$wireguard_server_ip}
+      - SERVERURL={$USE_IP}
       - SERVERPORT=51820
       - PEERS=4
-      - PEERDNS=${dns_server_ip}
-      - dns_server_ip=${dns_server_ip}
+      - PEERDNS=${USE_DNS}
+      - dns_server_ip=${USE_DNS}
     ports:
       - 51820:51820/udp
     volumes:
