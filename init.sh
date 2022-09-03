@@ -17,7 +17,7 @@ echo "Script by mtv47 to set up a nuc server with docker"
 echo ""
 
 echo "Please enter your choice: "
-options=("Installs for Docker" "Installs for Docker Containers")
+options=("Basic Setup" "Installs for Docker" "Installs for Docker Containers")
 
 select opt in "${options[@]}"
 do

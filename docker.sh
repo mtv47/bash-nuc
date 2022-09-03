@@ -2,8 +2,6 @@
 
 # This script is used to install docker and docker-compose on a nuc server
 
-sudo bash update.sh
-
 echo "================================================================================"
 echo "Update the apt package index"
 #and install packages to allow apt to use a repository over HTTPS
