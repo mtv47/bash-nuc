@@ -28,7 +28,7 @@ fi
 # Ask the user name
 echo "Please enter your user name: "
 read name
-USER_HOME = /home/$user
+USER_HOME = /home/$name
 
 # Clones the repository
 git clone https://github.com/mtv47/bash-nuc.git $USER_HOME/bash-nuc

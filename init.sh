@@ -16,11 +16,13 @@ echo ""
 echo "Script by mtv47 to set up a nuc server with docker"
 echo ""
 
-echo "Please enter your choice: "
-
 # Ask the user name
 echo "Please enter your user name: "
 read name
+
+echo ""
+echo "Please enter your choice: "
+echo ""
 
 sudo bash variables.sh
 
