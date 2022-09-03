@@ -26,7 +26,7 @@ if [ "$EUID" -ne 0 ]; then
 fi
 
 # Clones the repository
-[ -d "$HOME/bash-nuc" ] || git clone https://github.com/mtv47/bash-nuc.git $HOME/bash-nuc
+git clone https://github.com/mtv47/bash-nuc.git $HOME/bash-nuc
 
 cd $HOME/bash-nuc
 
