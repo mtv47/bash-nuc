@@ -36,7 +36,7 @@ do
             sudo bash docker.sh
             ;;
         "Installs for Docker Containers")
-            sudo bash containers.sh
+            sudo containers.sh
             ;;
         "Quit")
             break
