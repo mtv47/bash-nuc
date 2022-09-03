@@ -19,7 +19,8 @@ echo ""
 sudo bash variables.sh
 
 echo ""
-echo "This script will be working in $USER_HOME"
+echo "This script will be working in"
+echo $USER_HOME
 echo ""
 
 options=("Basic Setup" "Installs for Docker" "Installs for Docker Containers" "Quit")
