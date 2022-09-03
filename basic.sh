@@ -37,12 +37,12 @@ sudo ufw default allow outgoing
 sudo ufw default deny incoming
 echo "================================================================================"
 echo "Allowing port"
-sudo ufw enable ssh
-sudo ufw enable 80
-sudo ufw enable 53
-sudo ufw enable 2080
-sudo ufw enable 51820/udp
-sudo ufw enable 3001
+sudo ufw allow ssh
+sudo ufw allow 80
+sudo ufw allow 53
+sudo ufw allow 2080
+sudo ufw allow 51820/udp
+sudo ufw allow 3001
 echo "================================================================================"
 echo "Enabling UFW"
 sudo ufw start
