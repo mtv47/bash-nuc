@@ -33,7 +33,7 @@ sudo usermod -aG docker $USER
 echo "================================================================================"
 echo "Installing the lastest version of docker engine"
 sudo apt-get update
-sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin -y
 
 echo "================================================================================"
 echo "Verify if docker is installed"
