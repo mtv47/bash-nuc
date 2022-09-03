@@ -3,6 +3,7 @@
 PATH_TO_SCRIPTS="$HOME/bash-nuc"
 mkdir $HOME/docker_data
 DOCKER_DATA="$HOME/docker_data"
+export DOCKER_DATA
 
 #Installing Watchtower
 sudo docker run -d \
@@ -30,6 +31,7 @@ cd pihole
 echo "================================================================================"
 echo "Please enter a password for the pihole admin panel"
 read -s pihole_password
+export pihole_password=$pihole_password
 echo "================================================================================"
 echo "Freeing up port 53"
 sudo echo "DNS=9.9.9.9" >> /etc/systemd/resolved.conf
@@ -48,6 +50,12 @@ cd wireguard
 echo "================================================================================"
 echo "Please enter the ip address for the dns server"
 read dns_server_ip
+export dns_server_ip=$dns_server_ip
+#Request the ip address for the wireguard server
+echo "================================================================================"
+echo "Please enter the ip address for the wireguard server"
+read wireguard_server_ip
+export wireguard_server_ip=$wireguard_server_ip
 sudo docker-compose up -d
 
 echo "================================================================================"

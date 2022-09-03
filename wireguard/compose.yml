@@ -12,6 +12,7 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ=Europe/Zurich
+      - SERVERURL={$wireguard_server_ip}
       - SERVERPORT=51820
       - PEERS=4
       - PEERDNS=${dns_server_ip}
