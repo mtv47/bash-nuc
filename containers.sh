@@ -5,7 +5,7 @@ echo "What is your user name?"
 read user_name
 
 USER_HOME=$(eval echo ~$user_name)
-PATH_TO_SCRIPTS="$/bash-nuc"
+PATH_TO_SCRIPTS="$USER_HOME/bash-nuc"
 
 #Installing Watchtower
 sudo docker run -d \
