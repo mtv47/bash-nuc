@@ -16,6 +16,8 @@ echo ""
 echo "Script by mtv47 to set up a nuc server with docker"
 echo ""
 
+sudo bash variables.sh
+
 echo "Please enter your choice: "
 options=("Basic Setup" "Installs for Docker" "Installs for Docker Containers" "Quit")
 

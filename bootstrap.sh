@@ -25,10 +25,12 @@ if [ "$EUID" -ne 0 ]; then
   exit
 fi
 
+USER_HOME=$(eval echo ~${SUDO_USER})
+
 # Clones the repository
-git clone https://github.com/mtv47/bash-nuc.git $HOME/bash-nuc
+git clone https://github.com/mtv47/bash-nuc.git $USER_HOME/bash-nuc
 
-cd $HOME/bash-nuc
+cd $USER_HOME/bash-nuc
 
-clear
+clears
 sudo bash init.sh
