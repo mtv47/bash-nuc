@@ -30,13 +30,13 @@ select opt in "${options[@]}"
 do
     case $opt in
         "Basic Setup")
-            sudo bash basic.sh
+            bash basic.sh
             ;;
         "Installs for Docker")
-            sudo bash docker.sh
+            bash docker.sh
             ;;
         "Installs for Docker Containers")
-            sudo containers.sh
+            containers.sh
             ;;
         "Quit")
             break

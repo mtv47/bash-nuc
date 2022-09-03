@@ -19,12 +19,10 @@ if [[ "$os" == "ubuntu" && "$os_version" -lt 2004 ]]; then
   exit
 fi
 
-USER_HOME=$(eval echo ~${SUDO_USER})
-
 # Clones the repository
-git clone https://github.com/mtv47/bash-nuc.git $USER_HOME/bash-nuc
+git clone https://github.com/mtv47/bash-nuc.git $HOME/bash-nuc
 
-cd $USER_HOME/bash-nuc
+cd $HOME/bash-nuc
 
 clears
-sudo bash init.sh
+bash init.sh
