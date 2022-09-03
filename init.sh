@@ -36,7 +36,7 @@ do
             bash docker.sh
             ;;
         "Installs for Docker Containers")
-            containers.sh
+            bash containers.sh
             ;;
         "Quit")
             break
