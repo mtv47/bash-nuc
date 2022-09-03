@@ -1,8 +1,11 @@
 #!/bin/bash
 
-USER_HOME=$(eval echo ~${SUDO_USER})
-PATH_TO_SERVER_LOCATION="$USER_HOME/truenas"
-PATH_TO_SCRIPTS="$USER_HOME/bash-nuc"
+#Ask for user name
+echo "What is your user name?"
+read user_name
+
+USER_HOME=$(eval echo ~$user_name)
+PATH_TO_SCRIPTS="$/bash-nuc"
 
 #Installing Watchtower
 sudo docker run -d \
