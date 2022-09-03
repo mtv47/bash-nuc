@@ -1,7 +1,7 @@
 version: "2"
 services:
   wireguard:
-    image: linuxserver/wireguard:1.0.20210914
+    image: linuxserver/wireguard:latest
     container_name: wireguard
     restart: unless-stopped
 
@@ -15,6 +15,7 @@ services:
       - SERVERPORT=51820
       - PEERS=4
       - PEERDNS=${dns_server_ip}
+      - dns_server_ip=${dns_server_ip}
     ports:
       - 51820:51820/udp
     volumes:
