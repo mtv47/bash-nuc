@@ -19,7 +19,7 @@ docker-compose up -d
 
 echo "================================================================================"
 echo "Installing pihole"
-cd $PATH_TO_SCRIPTS/$PATH_TO_SCRIPTS
+cd $PATH_TO_SCRIPTS
 mkdir $USER_HOME/pihole_data
 cd pihole
 #Request a password for the pihole admin panel
@@ -30,7 +30,7 @@ docker-compose up -d
 
 echo "================================================================================"
 echo "Installing WIREGUARD"
-cd $PATH_TO_SCRIPTS/$PATH_TO_SCRIPTS
+cd $PATH_TO_SCRIPTS
 mkdir $USER_HOME/wireguard_data
 cd wireguard
 #Request the ip address for the dns server

@@ -19,6 +19,12 @@ echo ""
 sudo bash variables.sh
 
 echo "Please enter your choice: "
+
+# Ask the user name
+echo "Please enter your user name: "
+read name
+
+
 options=("Basic Setup" "Installs for Docker" "Installs for Docker Containers" "Quit")
 
 select opt in "${options[@]}"
