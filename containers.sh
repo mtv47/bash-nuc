@@ -53,3 +53,7 @@ mkdir $USER_HOME/uptime-kuma_data
 cd $PATH_TO_SCRIPTS/uptime-kuma
 sudo docker-compose up -d
 
+echo "================================================================================"
+echo "List all docker running containers"
+sudo docker ps
+
