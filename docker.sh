@@ -27,7 +27,7 @@ echo "In case the repository is not available yet, add the GPG key manually"
 sudo chmod a+r /etc/apt/keyrings/docker.gpg
 
 echo "================================================================================"
-echo " Adding the linux user to the docker group"
+echo "Adding the linux user to the docker group"
 sudo usermod -aG docker $USER
 
 echo "================================================================================"
