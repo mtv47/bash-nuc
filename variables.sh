@@ -8,5 +8,5 @@ export PATH_TO_SERVER_LOCATION
 export PATH_TO_SCRIPTS
 export USER_HOME
 
-./init.sh
-./containers.sh
+sudo ./init.sh
+sudo ./containers.sh
