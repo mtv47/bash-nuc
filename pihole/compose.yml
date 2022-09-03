@@ -11,6 +11,7 @@ services:
     environment:
       TZ: 'Europe/Zurich'
       WEBPASSWORD: '${pihole_password}'
+      pihole_password: '${pihole_password}'
       DNS1: 9.9.9.9
       DNS2: 8.8.8.8
     volumes:
