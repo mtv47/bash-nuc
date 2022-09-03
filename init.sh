@@ -16,7 +16,7 @@ echo ""
 echo "Script by mtv47 to set up a nuc server with docker"
 echo ""
 
-sudo bash variables
+sudo bash variables.sh
 
 echo ""
 echo "This script will be working in" $USER_HOME
