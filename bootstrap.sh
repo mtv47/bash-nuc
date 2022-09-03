@@ -19,12 +19,6 @@ if [[ "$os" == "ubuntu" && "$os_version" -lt 2004 ]]; then
   exit
 fi
 
-# Check if the user is root
-if [ "$EUID" -ne 0 ]; then
-  echo "This installer needs to be run as root."
-  exit
-fi
-
 USER_HOME=$(eval echo ~${SUDO_USER})
 
 # Clones the repository

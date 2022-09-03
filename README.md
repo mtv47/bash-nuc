@@ -7,7 +7,7 @@ Script menu that installs all the necessary containers and packages for a simple
 ## Usage
 
 ```
-wget https://raw.githubusercontent.com/mtv47/bash-nuc/main/bootstrap.sh -O bootstrap.sh && sudo bash bootstrap.sh
+wget https://raw.githubusercontent.com/mtv47/bash-nuc/main/bootstrap.sh -O bootstrap.sh && bash bootstrap.sh
 ```
 
 ## Features
