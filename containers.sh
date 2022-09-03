@@ -44,7 +44,7 @@ sudo echo "FallbackDNS=8.8.8.8" >> /etc/systemd/resolved.conf
 sudo ln -sf /run/systemd/resolve/resolv.conf /etc/resolv.conf
 sudo systemctl disable systemd-resolved
 sudo systemctl stop systemd-resolved
-sudo USE_PIHOLE_PASSWD docker-compose up -d
+sudo USE_PIHOLE_PASSWD=$pihole_password docker-compose up -d
 
 echo "================================================================================"
 echo "Installing WIREGUARD"
@@ -59,7 +59,7 @@ read dns_server_ip
 echo "================================================================================"
 echo "Please enter the ip address for the wireguard server"
 read wireguard_server_ip
-sudo USE_DNS USE_IP docker-compose up -d
+sudo USE_DNS=$dns_server_ip USE_IP=$wireguard_server_ip docker-compose up -d
 
 echo "================================================================================"
 echo "List all docker running containers"
