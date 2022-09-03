@@ -6,6 +6,8 @@ read user_name
 
 USER_HOME=$(eval echo ~$user_name)
 PATH_TO_SCRIPTS="$USER_HOME/bash-nuc"
+mkdir $USER_HOME/docker_data
+DOCKER_DATA= "$USER_HOME/docker_data"
 
 #Installing Watchtower
 sudo docker run -d \
@@ -20,14 +22,14 @@ sudo docker run -d \
 echo "================================================================================"
 echo "Installing portainer"
 cd $PATH_TO_SCRIPTS
-mkdir $USER_HOME/portainer_data
+mkdir $DOCKER_DATA/portainer_data
 cd $PATH_TO_SCRIPTS/portainer
 sudo docker-compose up -d
 
 echo "================================================================================"
 echo "Installing pihole"
 cd $PATH_TO_SCRIPTS
-mkdir $USER_HOME/pihole_data
+mkdir $DOCKER_DATA/pihole_data
 cd pihole
 #Request a password for the pihole admin panel
 echo "================================================================================"
@@ -38,7 +40,7 @@ sudo docker-compose up -d
 echo "================================================================================"
 echo "Installing WIREGUARD"
 cd $PATH_TO_SCRIPTS
-mkdir $USER_HOME/wireguard_data
+mkdir $DOCKER_DATA/wireguard_data
 cd wireguard
 #Request the ip address for the dns server
 echo "================================================================================"
@@ -49,7 +51,7 @@ sudo docker-compose up -d
 echo "================================================================================"
 echo "Installing Uptime-Kuma"
 cd $PATH_TO_SCRIPTS
-mkdir $USER_HOME/uptime-kuma_data
+mkdir $DOCKER_DATA/uptime-kuma_data
 cd $PATH_TO_SCRIPTS/uptime-kuma
 sudo docker-compose up -d
 
