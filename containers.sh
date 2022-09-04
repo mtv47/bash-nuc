@@ -43,7 +43,6 @@ sudo USED_DOCKER_DATA=$DOCKER_DATA docker-compose up -d
 echo "================================================================================"
 echo "Installing Pihole"
 cd $PATH_TO_SCRIPTS/pihole
-#Request a password for the pihole admin panel
 echo "================================================================================"
 echo "Please enter a password for the pihole admin panel"
 read -s pihole_password
