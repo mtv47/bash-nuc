@@ -17,21 +17,18 @@ sudo docker run -d \
 echo "================================================================================"
 echo "Installing portainer"
 cd $PATH_TO_SCRIPTS
-mkdir $DOCKER_DATA/portainer_data
 cd $PATH_TO_SCRIPTS/portainer
 sudo NOW_DOCKER_DATA=$DOCKER_DATA docker-compose up -d
 
 echo "================================================================================"
 echo "Installing Uptime-Kuma"
 cd $PATH_TO_SCRIPTS
-mkdir $DOCKER_DATA/uptime-kuma_data
 cd $PATH_TO_SCRIPTS/uptime-kuma
 sudo NOW_DOCKER_DATA=$DOCKER_DATA docker-compose up -d
 
 echo "================================================================================"
 echo "Installing pihole"
 cd $PATH_TO_SCRIPTS
-mkdir $DOCKER_DATA/pihole_data
 cd pihole
 #Request a password for the pihole admin panel
 echo "================================================================================"
@@ -49,7 +46,6 @@ sudo NOW_DOCKER_DATA=$DOCKER_DATA USE_PIHOLE_PASSWD=$pihole_password docker-comp
 echo "================================================================================"
 echo "Installing WIREGUARD"
 cd $PATH_TO_SCRIPTS
-mkdir $DOCKER_DATA/wireguard_data
 cd wireguard
 #Request the ip address for the dns server
 echo "================================================================================"
