@@ -19,14 +19,14 @@ echo "Installing portainer"
 cd $PATH_TO_SCRIPTS
 mkdir $DOCKER_DATA/portainer_data
 cd $PATH_TO_SCRIPTS/portainer
-sudo docker-compose up -d
+sudo NOW_DOCKER_DATA=$DOCKER_DATA docker-compose up -d
 
 echo "================================================================================"
 echo "Installing Uptime-Kuma"
 cd $PATH_TO_SCRIPTS
 mkdir $DOCKER_DATA/uptime-kuma_data
 cd $PATH_TO_SCRIPTS/uptime-kuma
-sudo docker-compose up -d
+sudo NOW_DOCKER_DATA=$DOCKER_DATA docker-compose up -d
 
 echo "================================================================================"
 echo "Installing pihole"
@@ -44,7 +44,7 @@ sudo echo "FallbackDNS=8.8.8.8" >> /etc/systemd/resolved.conf
 sudo ln -sf /run/systemd/resolve/resolv.conf /etc/resolv.conf
 sudo systemctl disable systemd-resolved
 sudo systemctl stop systemd-resolved
-sudo USE_PIHOLE_PASSWD=$pihole_password docker-compose up -d
+sudo NOW_DOCKER_DATA=$DOCKER_DATA USE_PIHOLE_PASSWD=$pihole_password docker-compose up -d
 
 echo "================================================================================"
 echo "Installing WIREGUARD"
@@ -59,7 +59,7 @@ read dns_server_ip
 echo "================================================================================"
 echo "Please enter the ip address for the wireguard server"
 read wireguard_server_ip
-sudo USE_DNS=$dns_server_ip USE_IP=$wireguard_server_ip docker-compose up -d
+sudo NOW_DOCKER_DATA=$DOCKER_DATA USE_DNS=$dns_server_ip USE_IP=$wireguard_server_ip docker-compose up -d
 
 echo "================================================================================"
 echo "List all docker running containers"

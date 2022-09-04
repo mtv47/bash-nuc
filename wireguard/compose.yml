@@ -21,6 +21,6 @@ services:
       - 51820:51820/udp
     volumes:
       - /lib/modules:/lib/modules
-      - ${HOME}/docker_data/wireguard:/config
+      - ${NOW_DOCKER_DATA}/wireguard:/config
     sysctls:
       - net.ipv4.conf.all.src_valid_mark=1
