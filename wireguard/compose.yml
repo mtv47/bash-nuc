@@ -12,11 +12,8 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ=Europe/Zurich
-      - SERVERURL=${USE_IP}
-      - SERVERPORT=51820
       - PEERS=4
       - PEERDNS=${USE_DNS}
-      - dns_server_ip=${USE_DNS}
     ports:
       - 51820:51820/udp
     volumes:
