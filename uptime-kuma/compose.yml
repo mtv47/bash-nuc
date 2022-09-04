@@ -4,8 +4,8 @@ services:
   uptime-kuma:
     image: louislam/uptime-kuma:latest
     container_name: uptime-kuma
+    networks:
+      - nginx_default # Port 3001 (web)
     volumes:
-      - ${NOW_DOCKER_DATA}/uptime-kuma-data:/app/data
-    ports:
-      - 3001:3001 
+      - ${USED_DOCKER_DATA}/uptime-kuma/data:/app/data
     restart: always

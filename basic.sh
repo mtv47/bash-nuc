@@ -37,12 +37,12 @@ sudo ufw default allow outgoing
 sudo ufw default deny incoming
 echo "================================================================================"
 echo "Allowing port"
-sudo ufw allow ssh
-sudo ufw allow 80
-sudo ufw allow 53
-sudo ufw allow 2080
-sudo ufw allow 51820/udp
-sudo ufw allow 3001
+sudo ufw allow ssh # Allow SSH
+sudo ufw allow 53 # Allow Pihole DNS
+sudo ufw allow 2080 # Allow Pihole (web)
+sudo ufw allow 80 # Allow HTTP (nginx web)
+sudo ufw allow 81 # Allow HTTP (nginx admin web)
+sudo ufw allow 443 # Allow HTTPS (nginx web)
 echo "================================================================================"
 echo "Enabling UFW"
 sudo ufw enable
