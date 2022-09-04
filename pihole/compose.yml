@@ -17,3 +17,18 @@ services:
       - '${USED_DOCKER_DATA}/pihole/etc:/etc/pihole'
       - '${USED_DOCKER_DATA}/pihole/dnsmasq.d:/etc/dnsmasq.d'     
     restart: unless-stopped
+  
+  pialert:
+    container_name: pialert
+    image: "jokobsk/pi.alert:latest"      
+    network_mode: "host"        
+    restart: always
+    volumes:
+      - '${USED_DOCKER_DATA}/pialert/config:/home/pi/pialert/config'
+      - '${USED_DOCKER_DATA}/pialert/db/pialert.db:/home/pi/pialert/db/pialert.db'
+      - '${USED_DOCKER_DATA}/pialert/log:/home/pi/pialert/log'
+    environment:
+      - TZ=Europe/Zurich
+      - PORT=20211
+      - HOST_USER_ID=1000
+      - HOST_USER_GID=1000
