@@ -44,20 +44,6 @@ sudo systemctl stop systemd-resolved
 sudo NOW_DOCKER_DATA=$DOCKER_DATA USE_PIHOLE_PASSWD=$pihole_password docker-compose up -d
 
 echo "================================================================================"
-echo "Installing WIREGUARD"
-cd $PATH_TO_SCRIPTS
-cd wireguard
-#Request the ip address for the dns server
-echo "================================================================================"
-echo "Please enter the ip address for the dns server"
-read dns_server_ip
-#Request the ip address for the wireguard server
-echo "================================================================================"
-echo "Please enter the ip address for the wireguard server"
-read wireguard_server_ip
-sudo NOW_DOCKER_DATA=$DOCKER_DATA USE_DNS=$dns_server_ip USE_IP=$wireguard_server_ip docker-compose up -d
-
-echo "================================================================================"
 echo "List all docker running containers"
 sudo docker ps
 

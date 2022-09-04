@@ -38,6 +38,9 @@ do
         "Installs for Docker Containers")
             bash containers.sh
             ;;
+        "Installs for Tailscale")
+            bash tailscale.sh
+            ;;
         "Quit")
             break
             ;;
