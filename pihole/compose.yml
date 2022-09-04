@@ -14,6 +14,6 @@ services:
       DNS1: 9.9.9.9
       DNS2: 8.8.8.8
     volumes:
-      - '${NOW_DOCKER_DATA}/docker_data/pihole/etc-pihole:/etc/pihole'
-      - '${NOW_DOCKER_DATA}/docker_data/pihole/etc-dnsmasq.d:/etc/dnsmasq.d'     
+      - '${NOW_DOCKER_DATA}/pihole/etc-pihole:/etc/pihole'
+      - '${NOW_DOCKER_DATA}/pihole/etc-dnsmasq.d:/etc/dnsmasq.d'     
     restart: unless-stopped
