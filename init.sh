@@ -24,7 +24,7 @@ echo "This script will be working in"
 echo $USER_HOME
 echo ""
 
-options=("Basic Setup" "Installs for Docker" "Installs for Docker Containers" "Quit")
+options=("Basic Setup" "Installs for Docker" "Installs for Docker Containers" "Installs for Tailscale" "Update" "Quit")
 
 select opt in "${options[@]}"
 do
@@ -40,6 +40,9 @@ do
             ;;
         "Installs for Tailscale")
             bash tailscale.sh
+            ;;
+        "Update")
+            bash update.sh
             ;;
         "Quit")
             break
