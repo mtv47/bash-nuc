@@ -21,7 +21,7 @@ wget https://raw.githubusercontent.com/mtv47/bash-nuc/main/bootstrap.sh -O boots
 * Pihole
 * Portainer
 * UptimeKuruma
-* Wireguard
+* Tailscale
 * Watchtower
 
 
