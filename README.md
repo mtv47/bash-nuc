@@ -31,14 +31,15 @@ wget https://raw.githubusercontent.com/mtv47/bash-nuc/main/bootstrap.sh -O boots
 ## Needed to add
 
 * Add nameservers to resolv.conf
-´´´
-sudo nano /etc/resolv.conf.manually-configured
-´´´
 
-´´´
+```
+sudo nano /etc/resolv.conf.manually-configured
+```
+
+```
 nameserver 8.8.8.8
 nameserver 8.8.4.4
-´´´
+```
 
 * Need to add to crontab -e
 ```
