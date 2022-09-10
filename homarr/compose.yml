@@ -7,5 +7,7 @@ services:
     volumes:
       - ${USED_DOCKER_DATA}/homarr/configs:/app/data/configs
       - ${USED_DOCKER_DATA}/homarr/icons:/app/public/icons
-    networks:
-      - nginx_default # Port 7575 for web
+networks:
+  default:
+    name: nginx_default # Port 7575 (web)
+    external: true

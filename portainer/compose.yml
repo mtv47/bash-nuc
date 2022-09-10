@@ -5,10 +5,12 @@ services:
     image: portainer/portainer-ce:latest
     container_name: portainer
     restart: unless-stopped
-    networks:
-      - nginx_default # Port 9443 (web)
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - /etc/timezone:/etc/timezone:ro
       - /var/run/docker.sock:/var/run/docker.sock:ro
       - ${USED_DOCKER_DATA}/portainer/data:/data
+networks:
+  default:
+    name: nginx_default # Port 9443 (web)
+    external: true
