@@ -40,7 +40,6 @@ echo "Allowing port"
 sudo ufw allow ssh # Allow SSH
 sudo ufw allow 53 # Allow Pihole DNS
 sudo ufw allow 2080 # Allow Pihole (web)
-sudo ufw allow 20211 # Allow PiAlert (web)
 sudo ufw allow 80 # Allow HTTP (nginx web)
 sudo ufw allow 81 # Allow HTTP (nginx admin web)
 sudo ufw allow 443 # Allow HTTPS (nginx web)
