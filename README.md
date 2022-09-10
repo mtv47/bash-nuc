@@ -27,3 +27,20 @@ wget https://raw.githubusercontent.com/mtv47/bash-nuc/main/bootstrap.sh -O boots
 
 ## Requirements
 * Debian/Ubuntu Server 20.04 or 22.04
+
+## Needed to add
+
+* Add nameservers to resolv.conf
+´´´
+sudo nano /etc/resolv.conf.manually-configured
+´´´
+
+´´´
+nameserver 8.8.8.8
+nameserver 8.8.4.4
+´´´
+
+* Need to add to crontab -e
+```
+@reboot sudo ln -s -f /etc/resolv.conf.manually-configured /etc/resolv.conf
+```
