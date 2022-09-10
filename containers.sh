@@ -48,8 +48,9 @@ echo "Please enter a password for the pihole admin panel"
 read -s pihole_password
 echo "================================================================================"
 echo "Freeing up port 53"
-sudo echo "DNS=9.9.9.9" >> /etc/systemd/resolved.conf
-sudo echo "FallbackDNS=8.8.8.8" >> /etc/systemd/resolved.conf
+sudo bash -c 'echo "DNS=9.9.9.9" >> /etc/systemd/resolved.conf'
+sudo bash -c 'echo "FallbackDNS=8.8.8.8" >> /etc/systemd/resolved.conf'
+sudo bash -c 'echo "DNSStubListener=no" >> /etc/systemd/resolved.conf'
 sudo ln -sf /run/systemd/resolve/resolv.conf /etc/resolv.conf
 sudo systemctl disable systemd-resolved
 sudo systemctl stop systemd-resolved
