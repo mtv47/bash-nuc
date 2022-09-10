@@ -46,7 +46,7 @@ nameserver 8.8.8.8
 nameserver 8.8.4.4
 ```
 
-* Need to add to crontab -e
+* Need to execute on reboot
 ```
-@reboot sudo ln -s -f /etc/resolv.conf.manually-configured /etc/resolv.conf
+sudo ln -s -f /etc/resolv.conf.manually-configured /etc/resolv.conf
 ```
