@@ -51,6 +51,8 @@ echo "Freeing up port 53"
 sudo bash -c 'echo "DNS=9.9.9.9" >> /etc/systemd/resolved.conf'
 sudo bash -c 'echo "FallbackDNS=8.8.8.8" >> /etc/systemd/resolved.conf'
 sudo bash -c 'echo "DNSStubListener=no" >> /etc/systemd/resolved.conf'
+sudo bash -c 'echo "nameserver 8.8.8.8" >> /etc/resolv.conf'
+sudo bash -c 'echo "nameserver 8.8.4.4" >> /etc/resolv.conf'
 sudo ln -sf /run/systemd/resolve/resolv.conf /etc/resolv.conf
 sudo systemctl disable systemd-resolved
 sudo systemctl stop systemd-resolved
