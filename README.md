@@ -28,9 +28,14 @@ wget https://raw.githubusercontent.com/mtv47/bash-nuc/main/bootstrap.sh -O boots
 ## Requirements
 * Debian/Ubuntu Server 20.04 or 22.04
 
-## Needed to add
+## Free port 53
 
 * Add nameservers to resolv.conf
+
+```
+sudo systemctl disable systemd-resolved
+sudo systemctl stop systemd-resolved
+```
 
 ```
 sudo nano /etc/resolv.conf.manually-configured
